@@ -36,6 +36,9 @@ function showActualData(response) {
   document.querySelector("#weather-description").innerHTML =
     response.data.weather[0].description;
   let iconElement = document.querySelector("#icon");
+
+  celciusTemperature = response.data.main.temp;
+
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
@@ -70,6 +73,29 @@ function showCurrentPosition(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(showPosition);
 }
+function showUnit(item) {
+  document.getElementById("dropdownMenuButton1").innerHTML = item.innerHTML;
+}
+
+function goToFahrenheit(event) {
+  event.preventDefault();
+  let actualTemperature = document.querySelector("#temperature-now");
+  let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
+  actualTemperature.innerHTML = Math.round(fahrenheitTemperature);
+}
+function goToCelcius(event) {
+  event.preventDefault();
+  let actualTemperature = document.querySelector("#temperature-now");
+  actualTemperature.innerHTML = Math.round(celciusTemperature);
+}
+
+let fahrenheitLink = document.querySelector("#fahrenheit-temp");
+fahrenheitLink.addEventListener("click", goToFahrenheit);
+
+let celciusLink = document.querySelector("#celcius-temp");
+celciusLink.addEventListener("click", goToCelcius);
+
+let celciusTemperature = null;
 
 let now = new Date();
 let currentDate = document.querySelector("#currentDate");

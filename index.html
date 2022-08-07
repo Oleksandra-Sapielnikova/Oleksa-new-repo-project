@@ -64,7 +64,7 @@
             </div>
             <h2>
               <img src="" class="current-weather-img" id="icon" />
-              <span id="temperature-now"> </span>°C
+              <span id="temperature-now"></span> °
             </h2>
             <div class="dropdown drpd-button d-flex justify-content-end">
               <button
@@ -78,10 +78,12 @@
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                 <li>
-                  <a class="dropdown-item" href="#" id="fahrenheit-temp">F</a>
+                  <a class="dropdown-item" href="#" onclick="showUnit(this)" id="fahrenheit-temp">F</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#" id="celcius-temp">C</a>
+                  <a class="dropdown-item" href="#" onclick="showUnit(this)" id="celcius-temp"
+                    >C</a
+                  >
                 </li>
               </ul>
             </div>
