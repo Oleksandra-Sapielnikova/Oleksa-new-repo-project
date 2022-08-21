@@ -66,42 +66,20 @@ h2 {
   font-weight: bold;
 }
 
-.forecast-day1,
-.forecast-day2,
-.forecast-day3,
-.forecast-day4,
-.forecast-day5 {
+.weather-forecast-day {
   text-align: center;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
 }
 
-.current-temperature {
+.weather-forecast-temperature {
+  text-align: center;
   font-size: 14px;
-  font-weight: 200px;
-  opacity: 0.8;
 }
 
-.five-days-forecast {
-  font-size: 19px;
-  font-weight: 500;
-  display: block;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.text-sunny {
-  fill: rgb(253, 180, 75);
-  height: 30px;
-  width: 30px;
-}
-
-.text-cloudy,
-.text-cloud-sun {
-  fill: blue;
-  height: 30px;
-  width: 30px;
+.weather-forecast-temperature-min {
+  opacity: 0.7;
 }
 .dropdown {
   top: -123px;
