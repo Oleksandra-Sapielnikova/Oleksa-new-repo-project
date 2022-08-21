@@ -66,6 +66,9 @@ h2 {
   font-weight: bold;
 }
 
+.weather-forecast {
+  text-align: center;
+}
 .weather-forecast-day {
   text-align: center;
   font-size: 16px;
